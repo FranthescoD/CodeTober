@@ -3,6 +3,10 @@
 Pequenos projetos. Novas ideias.
 O CodeTober é um desafio pessoal focado no desenvolvimento de 20 mini experimentos de interface web, explorando componentes, estilos modernos, layouts responsivos, animações e interatividade com código limpo.
 
+🌐 Demo Online / Site do Projeto
+    
+🔗 Link direto:https://franthescod.github.io/CodeTober/index.html
+
 🎯 Sobre o Desafio
 
 O objetivo principal do CodeTober não é construir sistemas ou aplicações complexas, mas sim se familiarizar, aprender e explorar diferentes possibilidades com HTML, CSS e JavaScript.
