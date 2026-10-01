@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Codetober - 02</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header glass">
+
+        <div class="container header-content">
+
+            <a href="index.html" class="logo">
+                <span class="logo-code">Code</span><span class="logo-tober">Tober</span>
+            </a>
+
+            <nav class="navigation">
+                <a href="#inicio">Início</a>
+                <a href="../index.html">Projetos</a>
+                <a href="#sobre">Sobre</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <section class="container project-intro" id="inicio">
+                    <div class="project-intro-content glass">
+                        <span class="project-intro-label">DIA 02</span>
+
+                        <h2>Badges & Status Cards</h2>
+
+                        <p>
+                            Uma coleção de cards interativos explorando a criação dinâmica de etiquetas (badges) de categorias para fotos e um indicador de status de usuário com menu dropdown contextual.
+                        </p>
+                    </div>
+                </section>
+
+        <div class="container main-content">
+
+        <!-- ================= Projeto do dia ================= -->
+
+
+        <div class="Card1 glass">
+            <div class="card1-image-container">
+            <img class="card1-image" src="https://picsum.photos/200">
+            <button class="variation-1 glass" id="add-button"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="button-icon"><path d="M3.333 8h9.334"/><path d="M8 3.333v9.334"/></svg></button>
+            <div  class="badge-variant-1" id="badge-variant-1"> </div>
+            </div>
+        </div>
+
+        <div class="Card2-container">
+                    <div class="Card2">
+                        <div class="card2-image-container">
+                            <img class="card2-image" src="https://picsum.photos/200" alt="Avatar do Usuário">
+                            <button class="circle dot-online" id="statusBadgeBtn" title="Alterar Status"></button>
+                        </div>
+                    </div>
+
+                    <div class="status-menu" id="statusMenu">
+                        <button type="button" class="status-option" data-status="online" data-label="Online" data-color="#22c55e">
+                          <span class="status-dot dot-online"></span> Online
+                        </button>
+                        <button type="button" class="status-option" data-status="ausente" data-label="Ausente" data-color="#eab308">
+                          <span class="status-dot dot-ausente"></span> Ausente
+                        </button>
+                        <button type="button" class="status-option" data-status="ocupado" data-label="Ocupado" data-color="#ef4444">
+                          <span class="status-dot dot-ocupado"></span> Ocupado
+                        </button>
+                        <button type="button" class="status-option" data-status="offline" data-label="Offline" data-color="#9ca3af">
+                          <span class="status-dot dot-offline"></span> Offline
+                        </button>
+                    </div>
+                </div>
+
+
+        <!-- ================= Projeto do dia ================= -->
+        </div>
+
+        <section class="container project-info" id="sobre">
+
+            <div class="project-info-content glass">
+                <h2>Tecnologias Utilizadas</h2>
+                <ul class="tech-list">
+                                    <li><strong>HTML5 Semântico:</strong> Estrutura limpa de cards, tags de imagens acessíveis e SVGs integrados para ícones de remoção e indicadores de status.</li>
+                                    <li><strong>CSS3 Moderno:</strong> Flexbox ("flex-wrap", "gap"), posicionamento absoluto/relativo avançado, efeitos de Glassmorphism e animações de transição de visibilidade no hover.</li>
+                                    <li><strong>JavaScript (ES6+):</strong> Manipulação dinâmica do DOM ("createElement", "appendChild", "remove"), escutadores de eventos ("addEventListener") e controle de fechamento de menu ao clicar fora ("e.stopPropagation").</li>
+                </ul>
+            </div>
+
+            <div class="project-info-content glass">
+                <h2>Conceitos Aplicados</h2>
+                <div class="concepts-grid">
+                                    <div class="concept-item">
+                                        <h3>1. Badges Dinâmicas & Flexbox Flow</h3>
+                                        <p>Criação programática de etiquetas de categorias com sorteio aleatório. O container limita a largura do card, forçando as badges a quebrarem de linha automaticamente sem deformar o layout.</p>
+                                    </div>
+
+                                    <div class="concept-item">
+                                        <h3>2. Ações Contextuais em Hover (Micro-interações)</h3>
+                                        <p>Uso de "position: relative" nas badges para ancorar o botão de eliminação em SVG. Ao passar o cursor, o texto é ocultado e o ícone de fecho surge centralizado para remoção imediata.</p>
+                                    </div>
+
+                                    <div class="concept-item">
+                                        <h3>3. Popover de Status Ancorado</h3>
+                                        <p>Menu dropdown de presença (Online, Ausente, Ocupado, Offline) posicionado relativamente à fotografia do utilizador, com alteração dinâmica de estados de cor e fecho automático ao clicar na página.</p>
+                        </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+                    <span class="logo-code">Code</span><span class="logo-tober">Tober</span>
+                </a>
+
+                <p>
+                    Um pequeno projeto por dia.
+                </p>
+
+            </div>
+
+            <div class="footer-info">
+
+                <p>
+                    Feito com HTML, CSS e JavaScript.
+                </p>
+
+                <p>
+                    2026 CodeTober
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
