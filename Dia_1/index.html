@@ -5,7 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Codetober</title>
+    <title>Codetober - 01</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -18,14 +24,14 @@
 
         <div class="container header-content">
 
-            <h1 class="logo">
+            <a href="index.html" class="logo">
                 <span class="logo-code">Code</span><span class="logo-tober">Tober</span>
-            </h1>
+            </a>
 
             <nav class="navigation">
-                <a href="#">Início</a>
-                <a href="#">Sobre</a>
+                <a href="#inicio">Início</a>
                 <a href="../index.html">Projetos</a>
+                <a href="#sobre">Sobre</a>
             </nav>
 
         </div>
@@ -36,20 +42,91 @@
     <!-- ================= MAIN ================= -->
 
     <main>
-        <container class="main-content">
+
+        <section class="container project-intro" id="inicio">
+            <div class="project-intro-content glass">
+                <span class="project-intro-label">DIA 01</span>
+
+                <h2>Botões</h2>
+
+                <p>
+                    Uma coleção de três variações de botões,
+                    explorando estilos, ícones e interações.
+                </p>
+            </div>
+        </section>
+
+        <div class="container main-content">
         <button class="variation-1 glass"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="button-icon"><path d="M3.333 8h9.334"/><path d="M8 3.333v9.334"/></svg> Adicionar</button>
 
         <button class="variation-2 outline"> Explorar </button>
 
         <button class="variation-3 light"> Continuar <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="Light-icon"><path d="m9 18 6-6-6-6"/> <path class="second-arrow"d="m16 18 6-6-6-6"/></svg></button>
-        </container>
+        </div>
+
+        <section class="container project-info" id="sobre">
+
+            <div class="project-info-content glass">
+                <h2>Tecnologias Utilizadas</h2>
+                <ul class="tech-list">
+                    <li><strong>HTML5:</strong> Semântica estrutural para botões acessíveis e inclusão de SVG nativo inline.</li>
+                    <li><strong>CSS3:</strong> Efeitos avançados de Glassmorphism, animações de luz, keyframes e transições suaves de hover.</li>
+                    <li><strong>SVG vector:</strong> Ícones vetorizados com manipulação de propriedades via CSS (stroke, hover e deslocamento).</li>
+                </ul>
+            </div>
+
+            <div class="project-info-content glass">
+                <h2>Conceitos Aplicados</h2>
+                <div class="concepts-grid">
+                    <div class="concept-item">
+                        <h3>1. Liquid Glass & Accent Fill</h3>
+                        <p>Efeito de vidro fosco (glassmorphism) combinado com transparência e destaque na cor de acentuação no hover, ideal para ações primárias elegantes.</p>
+                    </div>
+
+                    <div class="concept-item">
+                        <h3>2. Outline Revelador (Ghost to Border)</h3>
+                        <p>Design limpo no estado inicial estilo texto. O contorno surge dinamicamente ao passar o mouse, fornecendo feedback visual claro sem poluir a interface.</p>
+                    </div>
+
+                    <div class="concept-item">
+                        <h3>3. Iluminação & Animação Interna</h3>
+                        <p>Uso de gradientes dinâmicos e iluminação interna acompanhados do deslocamento da seta em ícones SVG para dar sensação de movimento e fluxo continuado.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
     </main>
     <!-- ================= FOOTER ================= -->
 
     <footer class="site-footer">
 
-        <div class="container">
-            <p>© 2026 CodeTober</p>
+        <div class="container footer-content">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+                    <span class="logo-code">Code</span><span class="logo-tober">Tober</span>
+                </a>
+
+                <p>
+                    Um pequeno projeto por dia.
+                </p>
+
+            </div>
+
+            <div class="footer-info">
+
+                <p>
+                    Feito com HTML, CSS e JavaScript.
+                </p>
+
+                <p>
+                    2026 CodeTober
+                </p>
+
+            </div>
+
         </div>
 
     </footer>

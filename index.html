@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -5,8 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Codetober</title>
+    <title>CodeTober</title>
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -18,13 +25,14 @@
 
         <div class="container header-content">
 
-            <h1 class="logo">
+            <a href="index.html" class="logo">
                 <span class="logo-code">Code</span><span class="logo-tober">Tober</span>
-            </h1>
+            </a>
 
             <nav class="navigation">
-                <a href="#">Início</a>
-                <a href="#">Sobre</a>
+                <a href="#inicio">Início</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#sobre">Sobre</a>
             </nav>
 
         </div>
@@ -35,20 +43,238 @@
     <!-- ================= MAIN ================= -->
 
     <main>
-        <container class="main-content">
-            <a href="Dia_1/index.html">Dia 1 - Botões</a>
-        </container>
+
+        <!-- ================= INTRO ================= -->
+
+            <section class="hero container" id="inicio">
+
+                <!-- Foto decorativa -->
+                <div class="hero-photo">
+                    <img
+                        src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Pessoa trabalhando em um computador"
+                    >
+                </div>
+
+                <div class="hero-content glass">
+
+                    <span class="hero-label">CODETOBER · 2026</span>
+
+                    <h1>
+                        Pequenos projetos.
+                        <span>Novas ideias.</span>
+                    </h1>
+
+                    <p>
+                        O CodeTober é um desafio pessoal para criar um pequeno
+                        projeto a cada dia, explorando interfaces, componentes,
+                        animações e diferentes possibilidades com código.
+                    </p>
+
+                    <p>
+                        Cada projeto é uma oportunidade para experimentar algo
+                        novo, aprender e, principalmente, continuar criando.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+        <!-- ================= PROJETOS ================= -->
+
+        <section class="projects container" id="projetos">
+
+            <div class="section-header">
+
+                <div>
+                    <span class="section-label">01 — 20</span>
+
+                    <h2>Projetos</h2>
+
+                    <p>
+                        Explore os projetos desenvolvidos ao longo do desafio.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="project-list">
+
+                <!-- ================= DIA 01 ================= -->
+
+                <a class="project-card glass" href="Dia_1/index.html">
+
+                    <span class="project-day">
+                        01
+                    </span>
+
+                    <div class="project-info">
+
+                        <h3>Botões</h3>
+
+                        <p>
+                            Exploração de diferentes estilos, efeitos e
+                            formas para botões.
+                        </p>
+
+                    </div>
+
+                    <span class="project-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- ================= DIA 02 ================= -->
+
+                <a class="project-card glass" href="Dia_2/index.html">
+
+                    <span class="project-day">
+                        02
+                    </span>
+
+                    <div class="project-info">
+
+                        <h3>Nome do projeto</h3>
+
+                        <p>
+                            Breve descrição do projeto desenvolvido neste dia.
+                        </p>
+
+                    </div>
+
+                    <span class="project-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- ================= DIA 03 ================= -->
+
+                <a class="project-card glass" href="Dia_3/index.html">
+
+                    <span class="project-day">
+                        03
+                    </span>
+
+                    <div class="project-info">
+
+                        <h3>Nome do projeto</h3>
+
+                        <p>
+                            Breve descrição do projeto desenvolvido neste dia.
+                        </p>
+
+                    </div>
+
+                    <span class="project-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <!--
+                ==================================================
+                PARA ADICIONAR UM NOVO PROJETO:
+
+                1. Copie o bloco abaixo.
+                2. Altere o número do dia.
+                3. Altere o link.
+                4. Altere o título.
+                5. Altere a descrição.
+                ==================================================
+
+                <a class="project-card glass" href="Dia_4/index.html">
+
+                    <span class="project-day">
+                        04
+                    </span>
+
+                    <div class="project-info">
+
+                        <h3>Nome do projeto</h3>
+
+                        <p>
+                            Descrição do projeto.
+                        </p>
+
+                    </div>
+
+                    <span class="project-arrow">
+                        →
+                    </span>
+
+                </a>
+                -->
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SOBRE ================= -->
+
+        <section class="about container" id="sobre">
+
+            <div class="about-content glass">
+
+                <span class="section-label">SOBRE</span>
+
+                <h2>Um projeto por dia.</h2>
+
+                <p>
+                    O objetivo do CodeTober não é criar grandes aplicações,
+                    nem sites completos, mas sim me familiarizar, aprender e construir alguma coisa.
+                </p>
+
+            </div>
+
+        </section>
+
     </main>
+
+
     <!-- ================= FOOTER ================= -->
 
     <footer class="site-footer">
 
-        <div class="container">
-            <p>© 2026 CodeTober</p>
+        <div class="container footer-content">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+                    <span class="logo-code">Code</span><span class="logo-tober">Tober</span>
+                </a>
+
+                <p>
+                    Um pequeno projeto por dia.
+                </p>
+
+            </div>
+
+            <div class="footer-info">
+
+                <p>
+                    Feito com HTML, CSS e JavaScript.
+                </p>
+
+                <p>
+                    2026 CodeTober
+                </p>
+
+            </div>
+
         </div>
 
     </footer>
 
+
+    <!-- ================= JAVASCRIPT ================= -->
 
     <script src="script.js"></script>
 
