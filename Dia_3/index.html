@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Codetober - 03</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header glass">
+
+        <div class="container header-content">
+
+            <a href="index.html" class="logo">
+                <span class="logo-code">Code</span><span class="logo-tober">Tober</span>
+            </a>
+
+            <nav class="navigation">
+                <a href="#inicio">Início</a>
+                <a href="../index.html">Projetos</a>
+                <a href="#sobre">Sobre</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <section class="container project-intro" id="inicio">
+                    <div class="project-intro-content glass">
+                        <span class="project-intro-label">DIA 03</span>
+
+                        <h2>Cards</h2>
+
+                        <p>
+                            Uma biblioteca de cards interativos explorando técnicas avançadas de exibição de conteúdo oculto: desde efeitos de slide-up com overlay de contexto até rotações 3D (flip card) com preservação espacial para fichas técnicas.
+                        </p>
+                    </div>
+                </section>
+
+        <div class="container main-content">
+
+        <!-- ================= Projeto do dia ================= -->
+
+
+        <div class="Card1 glass">
+            <div class="card1-image-container">
+            <img class="card1-image" src="https://picsum.photos/300/500">
+            <button class="variation-1 glass hide" id="showmore-button">
+                <span class="showmore-text">
+                    <p class="mostrar-mais">Mostrar Mais</p>
+                    <h4>Título do Produto</h4>
+                    <span class="category">Categoria / Subtítulo</span>
+                    <p>Descrição do produto ou imagem mais complexa, ocupando espaço suficiente para exibir detalhes.</p>
+                    <div class="tags">
+                        <span class="tag">⭐ 4.9 |</span>
+                        <span class="tag">✦ Premium</span>
+                    </div>
+                </span>
+            </button>
+            </div>
+        </div>
+
+        <div class="flip-card-wrapper" data-flip-card>
+          <div class="flip-card-inner">
+
+            <!-- Lado da Frente -->
+            <div class="flip-card-front">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500" alt="Processador">
+              <div class="flip-card-body">
+                <h3>Processador Quantum X</h3>
+                <p>Alta performance e eficiência energética para tarefas complexas.</p>
+                <span class="flip-card-hint">Clique para ver especificações ➔</span>
+              </div>
+            </div>
+
+            <!-- Lado do Verso -->
+            <div class="flip-card-back">
+              <div>
+                <h4>Ficha Técnica</h4>
+                <ul class="flip-card-specs">
+                  <li><span>Arquitetura:</span> <strong>3 nm</strong></li>
+                  <li><span>Núcleos:</span> <strong>12 Cores (8P + 4E)</strong></li>
+                  <li><span>Clock Base:</span> <strong>3.4 GHz</strong></li>
+                  <li><span>Clock Boost:</span> <strong>5.1 GHz</strong></li>
+                  <li><span>TDP Max:</span> <strong>65W</strong></li>
+                  <li><span>Suporte RAM:</span> <strong>DDR5 6400MHz</strong></li>
+                </ul>
+              </div>
+              <div class="flip-card-footer">Clique para voltar</div>
+            </div>
+
+          </div>
+        </div>
+
+
+        <!-- ================= Projeto do dia ================= -->
+        </div>
+
+        <section class="container project-info" id="sobre">
+
+            <div class="project-info-content glass">
+                <h2>Tecnologias Utilizadas</h2>
+                <ul class="tech-list">
+                    <li><strong>HTML5 Semântico:</strong> Estrutura de containers isolados, organização clara por faces/camadas (frente, verso e overlay) e uso correto de elementos de imagem com acessibilidade (`alt`).</li>
+                    <li><strong>CSS3 Avançado:</strong> Renderização 3D com <code>perspective</code>, <code>transform-style: preserve-3d</code>, <code>backface-visibility: hidden</code> e rotações no eixo Y; além de animações com <code>transform: translateY()</code>, gradientes de contraste e efeitos de Glassmorphism (<code>backdrop-filter</code>).</li>
+                    <li><strong>JavaScript (ES6+):</strong> Gerenciamento de estado de interação e rotação via <code>classList.toggle()</code>, escutadores de eventos reutilizáveis (<code>addEventListener</code>) e uso de atributos de dados (<code>data-*</code>) para evitar poluição do escopo global.</li>
+                </ul>
+            </div>
+
+            <div class="project-info-content glass">
+                <h2>Conceitos Aplicados</h2>
+                <div class="concepts-grid">
+                    <div class="concept-item">
+                        <h3>1. Animações e Espaço Tridimensional (3D Transforms)</h3>
+                        <p>Uso de "perspective" no contêiner para criar profundidade espacial e "transform-style: preserve-3d" para gerenciar as faces frontal e traseira. A rotação no eixo Y ("rotateY") com "backface-visibility: hidden" garante que a face oposta fique invisível quando virada.</p>
+                    </div>
+
+                    <div class="concept-item">
+                        <h3>2. Camadas Deslizantes & Revelação Dinâmica (Slide-up Reveal)</h3>
+                        <p>Uso de posicionamento absoluto ("inset: 0") para alinhar a camada oculta sobre a imagem, controlando sua visibilidade por meio de transições de translação vertical ("transform: translateY"). Ao interagir, a camada desliza suavemente revelando o conteúdo escondido.</p>
+                    </div>
+
+                    <div class="concept-item">
+                        <h3>3. Legibilidade de Conteúdo & Filtros Visuais (Overlay Contrast)</h3>
+                        <p>Aplicação de gradientes de contraste ("linear-gradient") e desfoque de fundo com "backdrop-filter" (Glassmorphism) para garantir que textos sobrepostos permaneçam perfeitamente legíveis e acessíveis, independentemente das cores ou complexidade da imagem de fundo.</p>
+                    </div>
+                        </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+                    <span class="logo-code">Code</span><span class="logo-tober">Tober</span>
+                </a>
+
+                <p>
+                    Um pequeno projeto por dia.
+                </p>
+
+            </div>
+
+            <div class="footer-info">
+
+                <p>
+                    Feito com HTML, CSS e JavaScript.
+                </p>
+
+                <p>
+                    2026 CodeTober
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
