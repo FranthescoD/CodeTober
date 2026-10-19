@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Codetober - 04</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Model Viewer Script -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header glass">
+
+        <div class="container header-content">
+
+            <a href="index.html" class="logo">
+                <span class="logo-code">Code</span><span class="logo-tober">Tober</span>
+            </a>
+
+            <nav class="navigation">
+                <a href="#inicio">Início</a>
+                <a href="../index.html">Projetos</a>
+                <a href="#sobre">Sobre</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <section class="container project-intro" id="inicio">
+            <div class="project-intro-content glass">
+                <span class="project-intro-label">DIA 04</span>
+
+                <h2>Modelos 3D na Web</h2>
+
+                <p>
+                    Uma vitrine interativa comparando três abordagens distintas para introduzir elementos tridimensionais em páginas web: desde transformações geométricas em CSS puro e componentes WebGL nativos até a incorporação direta de ativos da nuvem.
+                </p>
+            </div>
+        </section>
+
+        <div class="container main-content">
+
+            <!-- ================= Vitrine Unificada de Abordagens 3D ================= -->
+
+            <div class="cards-comparison-grid">
+
+                <!-- ABORDAGEM 1: CSS 3D Transforms -->
+                <div class="card-demo-box glass">
+                    <div class="demo-card-header">
+                        <span class="badge css-badge">Estilo 1: CSS 3D Puro</span>
+                        <h3>Flip Card Geométrico</h3>
+                        <p class="desc-breve">Estruturado puramente com camadas e transformações em CSS.</p>
+                    </div>
+
+                    <div class="demo-viewport">
+                        <div class="flip-card-wrapper" data-flip-card>
+                          <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500" alt="Processador">
+                              <div class="flip-card-body">
+                                <h4>Quantum X</h4>
+                                <p>Performance e eficiência.</p>
+                                <span class="flip-card-hint">Clique para virar ➔</span>
+                              </div>
+                            </div>
+                            <div class="flip-card-back">
+                              <div>
+                                <h5>Ficha Técnica</h5>
+                                <ul class="flip-card-specs">
+                                  <li><span>Arquitetura:</span> <strong>3 nm</strong></li>
+                                  <li><span>Núcleos:</span> <strong>12 Cores</strong></li>
+                                  <li><span>Peso JS:</span> <strong>0 KB</strong></li>
+                                </ul>
+                              </div>
+                              <div class="flip-card-footer">Clique para voltar</div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="pros-cons-box">
+                        <p><strong>Prós:</strong> 0 dependências, ultra-rápido, acessível.</p>
+                        <p><strong>Contras:</strong> Limitado a planos e rotações simples.</p>
+                    </div>
+                </div>
+
+
+                <!-- ABORDAGEM 2: Web Component / Sketchfab Embed -->
+                <div class="card-demo-box glass">
+                    <div class="demo-card-header">
+                        <span class="badge model-badge">Estilo 2: Sketchfab Embed</span>
+                        <h3>Modelo na Nuvem (iframe)</h3>
+                        <p class="desc-breve">Carregado diretamente dos servidores do Sketchfab.</p>
+                    </div>
+
+                    <div class="demo-viewport" style="padding: 0; background: #000;">
+                        <iframe
+                            title="Modelo 3D Sketchfab"
+                            frameborder="0"
+                            allowfullscreen
+                            mozallowfullscreen="true"
+                            webkitallowfullscreen="true"
+                            allow="autoplay; fullscreen; xr-spatial-tracking"
+                            src="https://sketchfab.com/models/f844c0357d284fd8baa1435e9ff31bb2/embed"
+                            style="width: 100%; height: 100%; border: none;">
+                        </iframe>
+                    </div>
+
+                    <div class="pros-cons-box">
+                        <p><strong>Prós:</strong> Zero peso no site, fácil implementação via nuvem.</p>
+                        <p><strong>Contras:</strong> Dependência externa e interface padrão.</p>
+                    </div>
+                </div>
+
+
+                <!-- ABORDAGEM 3: WebGL / Three.js Canvas -->
+                <div class="card-demo-box glass">
+                    <div class="demo-card-header">
+                        <span class="badge webgl-badge">Estilo 3: WebGL (Three.js)</span>
+                        <h3>Renderização Programática</h3>
+                        <p class="desc-breve">Cena 3D gerada por código e shaders customizados.</p>
+                    </div>
+
+                    <div class="demo-viewport webgl-container" id="webgl-card-container">
+                        <div class="webgl-fallback-info">
+                            <span>Geometria Procedural Interativa</span>
+                        </div>
+                    </div>
+
+                    <div class="pros-cons-box">
+                        <p><strong>Prós:</strong> Liberdade total de animação em tempo real.</p>
+                        <p><strong>Contras:</strong> Curva de aprendizado e lógica avançada.</p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- ================= Fim da Comparação ================= -->
+
+        </div>
+
+        <section class="container project-info" id="sobre">
+
+            <div class="project-info-content glass">
+                <h2>Tecnologias Utilizadas</h2>
+                <ul class="tech-list">
+                    <li><strong>CSS3 3D Transforms:</strong> Manipulação espacial com propriedades como <code>perspective</code>, <code>transform-style: preserve-3d</code> e <code>rotateY</code> para criar efeitos de virada (flip).</li>
+                    <li><strong>Sketchfab Embed API:</strong> Integração de modelos tridimensionais complexos direto via nuvem utilizando elementos <code>&lt;iframe&gt;</code> otimizados.</li>
+                    <li><strong>Three.js & WebGL:</strong> Criação programática de cenas gráficas 3D, controle de iluminação ambiente/pontual e animações por loop baseadas em eventos de mouse.</li>
+                </ul>
+            </div>
+
+            <div class="project-info-content glass">
+                <h2>Conceitos Aplicados</h2>
+                <div class="concepts-grid">
+                    <div class="concept-item">
+                        <h3>1. Perspectiva Espacial & Pseudo-3D</h3>
+                        <p>Utilização de profundidade CSS para simular volumes e interações táteis sem o custo de renderização de malhas poligonais pesadas.</p>
+                    </div>
+
+                    <div class="concept-item">
+                        <h3>2. Streaming de Ativos 3D na Nuvem</h3>
+                        <p>Exibição de modelos complexos sem ocupar espaço de armazenamento local no servidor do site, ideal para catálogos de produtos e e-commerce.</p>
+                    </div>
+
+                    <div class="concept-item">
+                        <h3>3. Computação Gráfica via Canvas & WebGL</h3>
+                        <p>Controle direto do pipeline gráfico do navegador para renderizar vértices, malhas e materiais dinâmicos interativos.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+                    <span class="logo-code">Code</span><span class="logo-tober">Tober</span>
+                </a>
+
+                <p>
+                    Um pequeno projeto por dia.
+                </p>
+
+            </div>
+
+            <div class="footer-info">
+
+                <p>
+                    Feito com HTML, CSS e JavaScript.
+                </p>
+
+                <p>
+                    2026 CodeTober
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
