@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Codeweek - 06</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header glass">
+
+        <div class="container header-content">
+
+            <a href="../index.html" class="logo">
+                <span class="logo-code">Code</span><span class="logo-tober">Week</span>
+            </a>
+
+            <nav class="navigation">
+                <a href="#inicio">Início</a>
+                <a href="../index.html">Projetos</a>
+                <a href="#sobre">Sobre</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <section class="container project-intro" id="inicio">
+            <div class="project-intro-content glass">
+                <span class="project-intro-label">DIA 06</span>
+
+                <h2>Sliders & Controles Deslizantes</h2>
+
+                <p>
+                    Uma coleção de 4 controles deslizantes com identidades visuais e mecânicas completamente distintas: desde brilho neon fluido, seletor tático cyberpunk e termostato vertical até um pad bidirecional 2D para manipulação em dois eixos (X, Y).
+                </p>
+            </div>
+        </section>
+
+        <div class="container main-content">
+
+            <!-- ================= Vitrine de Sliders ================= -->
+
+            <div class="cards-comparison-grid sliders-grid">
+
+                <!-- 1. SLIDER 1: NEON LIQUID -->
+                <div class="card-demo-box glass slider-card-neon">
+                    <div class="demo-card-header">
+                        <span class="badge css-badge">Slider 1: Neon Liquid</span>
+                        <h3>Controle de Brilho Neon</h3>
+                        <p class="desc-breve">Trilho com preenchimento reativo e brilho ciano em tempo real.</p>
+                    </div>
+
+                    <div class="demo-viewport slider-demo-viewport">
+                        <div class="slider-wrapper">
+                            <input type="range" min="0" max="100" value="65" id="slider-1" class="range-neon">
+                            <div class="slider-info-row">
+                                <span>0%</span>
+                                <span class="slider-status status-neon" id="slider-1-val">65%</span>
+                                <span>100%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pros-cons-box">
+                        <p><strong>Uso:</strong> Ajustes de intensidade luminosa, volume e iluminação RGB.</p>
+                    </div>
+                </div>
+
+
+                <!-- 2. SLIDER 2: CYBERPUNK TÁTICO -->
+                <div class="card-demo-box glass slider-card-cyber">
+                    <div class="demo-card-header">
+                        <span class="badge model-badge">Slider 2: Cyber Tático</span>
+                        <h3>Seletor de Potência</h3>
+                        <p class="desc-breve">Design angulado e passos discretos com estética industrial.</p>
+                    </div>
+
+                    <div class="demo-viewport slider-demo-viewport">
+                        <div class="slider-wrapper">
+                            <input type="range" min="1" max="4" step="1" value="3" id="slider-2" class="range-cyber">
+                            <div class="slider-info-row">
+                                <span class="slider-status status-cyber" id="slider-2-val">SPORT (Nível 3)</span>
+                            </div>
+                            <div class="cyber-step-markers">
+                                <span class="cyber-step">ECO</span>
+                                <span class="cyber-step">NORM</span>
+                                <span class="cyber-step active-cyber">SPORT</span>
+                                <span class="cyber-step">TURBO</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pros-cons-box">
+                        <p><strong>Uso:</strong> Seleção de modos de desempenho e perfis de velocidade.</p>
+                    </div>
+                </div>
+
+
+                <!-- 3. SLIDER 3: PILL VERTICAL TÉRMICO -->
+                <div class="card-demo-box glass slider-card-vertical">
+                    <div class="demo-card-header">
+                        <span class="badge webgl-badge">Slider 3: Vertical Térmico</span>
+                        <h3>Termostato de Temperatura</h3>
+                        <p class="desc-breve">Controle em orientação vertical com gradiente térmico fluido.</p>
+                    </div>
+
+                    <div class="demo-viewport slider-demo-viewport vertical-viewport">
+                        <div class="vertical-slider-wrapper">
+                            <div class="vertical-scale">
+                                <span>50°C</span>
+                                <span>25°C</span>
+                                <span>0°C</span>
+                            </div>
+                            <div class="range-vertical-container">
+                                <input type="range" min="0" max="50" value="28" id="slider-3" class="range-vertical">
+                            </div>
+                            <div class="vertical-readout">
+                                <span id="slider-3-val">28°C</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pros-cons-box">
+                        <p><strong>Uso:</strong> Climatização, mixers de áudio e regulagem de níveis.</p>
+                    </div>
+                </div>
+
+
+                <!-- 4. SLIDER 4: PAD 2D BIDIRECIONAL (X, Y) -->
+                <div class="card-demo-box glass slider-card-2d">
+                    <div class="demo-card-header">
+                        <span class="badge css-badge">Slider 4: Bidirecional 2D</span>
+                        <h3>Pad de Coordenadas (X, Y)</h3>
+                        <p class="desc-breve">Controle de área bidimensional para ajuste simultâneo nos eixos X e Y.</p>
+                    </div>
+
+                    <div class="demo-viewport slider-demo-viewport pad-viewport">
+                        <div class="xy-pad-wrapper">
+                            <div class="xy-pad" id="xy-pad">
+                                <div class="xy-grid-line line-x" id="xy-line-x"></div>
+                                <div class="xy-grid-line line-y" id="xy-line-y"></div>
+                                <div class="xy-handle" id="xy-handle"></div>
+                            </div>
+                            <div class="xy-readouts">
+                                <div class="xy-badge">Eixo X: <strong id="xy-val-x">50%</strong></div>
+                                <div class="xy-badge">Eixo Y: <strong id="xy-val-y">50%</strong></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pros-cons-box">
+                        <p><strong>Uso:</strong> Joysticks, posicionamento 2D, pan/tilt e balanço estéreo.</p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- ================= Fim da Vitrine ================= -->
+
+        </div>
+
+        <section class="container project-info" id="sobre">
+
+            <div class="project-info-content glass">
+                <h2>Tecnologias Utilizadas</h2>
+                <ul class="tech-list">
+                    <li><strong>HTML5 Input Range & CSS Custom Properties:</strong> Customização de trilhos, knobs e orientações para criar identidades visuais distintas.</li>
+                    <li><strong>Manipulação de Eventos de Ponteiro (Mouse & Touch):</strong> Implementação de captura bidimensional de coordenadas para o Pad 2D (Eixos X e Y).</li>
+                    <li><strong>Design System Baseado em Glassmorphism:</strong> Manutenção da identidade do CodeWeek com efeitos translúcidos e estilização avançada de componentes.</li>
+                </ul>
+            </div>
+
+            <div class="project-info-content glass">
+                <h2>Conceitos Aplicados</h2>
+                <div class="concepts-grid">
+                    <div class="concept-item">
+                        <h3>1. Identidades Visuais Diversificadas</h3>
+                        <p>Cada slider utiliza uma linguagem estética única (Neon Cyber, Tático Angulado, Térmico Vertical e Vector Pad 2D).</p>
+                    </div>
+
+                    <div class="concept-item">
+                        <h3>2. Interação Multidimensional (2D)</h3>
+                        <p>Mapeamento de deslocamento nos eixos horizontal (X) e vertical (Y) dentro de um plano delimitado.</p>
+                    </div>
+
+                    <div class="concept-item">
+                        <h3>3. Feedback Reativo Instantâneo</h3>
+                        <p>Atualizações dinâmicas de cores, posições e valores percentuais sincronizadas aos gestos do usuário.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <div class="footer-brand">
+
+                <a href="../index.html" class="logo">
+                    <span class="logo-code">Code</span><span class="logo-tober">Week</span>
+                </a>
+
+                <p>
+                    Um pequeno projeto por dia.
+                </p>
+
+            </div>
+
+            <div class="footer-info">
+
+                <p>
+                    Feito com HTML, CSS e JavaScript.
+                </p>
+
+                <p>
+                    2026 CodeWeek
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
